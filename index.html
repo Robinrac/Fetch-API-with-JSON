@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API with JSON</title>
+    <author>Robin Raczkiewicz</author>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Fetch API with JSON</h1>
+        <h2>Description:</h2>
+        <p>This is an application that fetches holidays from an API by: https://date.nager.at</p>
+        <p>This application lets you filter and search through the API for specific holidays. </p>
+        <p>You can search for specific holidays using the searchbox and/or filter through specific Countries and Years by selecting them.</p>
+        <hr>
+    </div>
+    <!--Search bar for holidays-->
+    <label for="search-input">Search:</label>
+    <input type="text" id="search-input" placeholder="Search for holiday...">
+
+    <!--Select input to search for selected country -->
+    <label for="country-select">Select Country:</label>
+    <select id="country-select">
+        <option value="">All</option>
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+        <option value="GB">Great Britain</option>
+        <option value="SE">Sweden</option>
+        <option value="PL">Poland</option>
+        <option value="ES">Spain</option>
+        <option value="CH">China</option>
+    </select>
+
+    <!--Select input to search for selected Year-->
+    <label for="year-select">Select Year:</label>
+    <select id="year-select">
+        <option value="">All</option>
+    </select>
+
+    <!--Search button to go through with search settings-->
+    <button id="search-button">Search</button>
+
+    <button id="clear-filters-button">Clear Filters</button>
+
+    <br>
+    <br>
+
+    <!--Div containing table with IDs so fetched data can be displayed within-->
+    <section id="sgallery">
+        <div id="data-container">
+            <table id="holiday-table">
+                <thead>
+                    <tr>
+                        <th>Country:</th>
+                        <th>Holiday Name:</th>
+                        <th>Date:</th>
+                    </tr>
+                </thead>
+                <tbody id="holiday-table-body">
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
